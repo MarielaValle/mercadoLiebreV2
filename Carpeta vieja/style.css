@@ -1,0 +1,234 @@
+*{
+
+  box-sizing: border-box;
+
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-family: roboto;
+  
+}
+
+
+
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
+h2{
+  font-size: 24px;
+  color:#666666;
+ 
+}
+
+p {
+  font-size:15px;
+  text-align: center;
+  margin: 0 5px;
+  color:#666666;
+}
+
+header {
+  background-color:#EAC926 ;
+  height: 30vh;
+ 
+}
+
+.foto-logo {
+  width: 35%;
+  
+}
+
+header span {
+padding: 15px 5px;
+
+}
+
+.s-logo{
+  margin-left:10px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+.logoC{
+
+  padding-top:5px;
+  padding-bottom: 10px;
+}
+
+.foto-banner{
+  width: 100%;
+ 
+}
+
+.foto-producto {
+  width: 40%;
+}
+
+footer h2 {
+  font-size: 0.9em;
+   padding: 20px;
+   text-align: center;
+   margin: 0 5px;
+}
+footer p {
+  padding: 20px;
+  font-size: 0.8em;
+}
+
+
+
+
+  
+
+
+.navbar-toggler{
+
+  background-color:#03264C;
+  position:relative;
+  left:170px;
+  bottom: 15px;
+  width: 15%;
+}
+
+.menuGrande{
+
+
+}
+
+
+
+
+a right-navbar{
+  margin-left: 13px;
+  
+}
+
+a left-navbar{
+
+  margin-left: 13px;
+}
+.titulo-H{
+  color:#03264C;
+}
+@media (min-width:768px){
+  .pos-f-t{
+      display:none;
+  }
+.foto-logo{
+   width: 20%;
+}
+
+header span {
+  margin-right: 80px;
+  padding: 15px 5px;
+}
+
+.logoC{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.s-logo{
+  font-size: 0.9em;
+ 
+}
+.titulo-H{
+  color:#03264C;
+}
+.menuGrande{
+
+  margin-left: 10px;
+}
+
+header a{
+   margin-left: 15px;
+   color:#03264C;
+
+  
+ 
+}
+.right-navbar{
+  display:flex ;
+  flex-direction: row;
+  justify-content:space-between ;
+
+}
+}
+
+@media(max-width:767px){
+  .menuGrande {
+      display:none
+  }
+
+.logoC{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s-logo{
+  font-size: 0.7em;
+}
+.navbar-toggler{
+      
+     
+  left:300px;
+  bottom:5px;
+}
+
+}
+
+@media (max-width:680px){
+  .navbar-toggler{
+      
+     
+      left:230px;
+  }
+}
+
+@media (max-width:500px){
+  
+  .navbar-toggler{
+      
+     
+      left:173px;
+  }
+}
+
+@media (max-width:400px){
+  
+  .navbar-toggler{
+      
+     
+      left:130px;
+     
+  }
+}
+
+/*----vip-products-----*/
+
+.vip-products {
+  background-color: blue;
+ 
+}
