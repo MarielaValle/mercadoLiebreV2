@@ -1,30 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
-<body>
+
+
+<%- include('./partials/head.ejs')%>
+
+<body >
     
-    <h2>Productos en oferta</h2>
-    <div class="container">
-        <div class="row">
-            <div class= "col-sm-12 col-md-6 col-lg-3">
-                
-                <% for (var i= 0; i< productsInSale.length; i++){ %>
-                    <ul>
-                        <li> <%= productsInSale[i].name %> </li>
-                    </ul>
-                    
-                    <% } %> 
-                </div>
-                
-                
-                
-                    
-                    
-                    
-            </div>
-                
-                
-                
+    <%- include('./partials/header.ejs')%>
+    <!-- Fin Menu------------------------------------------------------------>
+    
+    <div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Basado en tu última visita</h2>
             </div>
             
-        </body>
-        </html>
+            <% productsVisited.forEach(productVisited => { %>
+			<div class="col-12 col-sm-6 col-lg-3">
+                
+				<section class="product-box">
+					<a href="/product/detail/<%= productVisited.id %>">
+						<figure class="product-box_image">
+							<img src="/images/<%= productVisited.image %>" alt="imagen de producto">
+						</figure>
+						<article class="product-box_data">
+							<h2>$<%=formatPrice(productVisited.price,productVisited.discount) %></h2>
+							<span><%= productVisited.discount %>%OFF</span>
+							<p><%= productVisited.name %></p>
+							<i class="fas fa-truck"></i>
+						</article>
+					</a>
+                </section>
+               
+			</div>
+			
+            <% }); %> 
+
+                   <!--------------------------row-->                     
+   </div>                                
+            
+   <div class="container products-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="products-title">Productos en oferta</h2>
+        </div>
+
+        <% productsInSale.forEach(productInSale => { %>
+        <div class="col-12 col-sm-6 col-lg-3">
+            
+            <section class="product-box">
+                <a href="/product/detail/<%= productInSale.id %>">
+                    <figure class="product-box_image">
+                        <img src="/images/<%= productInSale.image %>" alt="imagen de producto">
+                    </figure>
+                    <article class="product-box_data">
+                        <h2>$<%=formatPrice(productInSale.price,productInSale.discount) %></h2>
+                        <span><%= productInSale.discount %> %OFF</span>
+                        <p><%= productInSale.name %></p>
+                        <i class="fas fa-truck"></i>
+                    </article>
+                </a>
+            </section>
+           
+        </div>
+        <% }); %> 
+          
+
+               <!--------------------------row-->                     
+</div>                                
+                                         
+                            
+        
+        
+        
+      <!-- Inicio Fotter---------------------------------------------------------->
+          <%- include('./partials/footer.ejs')%>
+                            
+       <!-- Fin Fotter-------------------------------------------------------------->
+      
+  </body>
+                        
+  </html>

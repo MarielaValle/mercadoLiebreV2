@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+    <%- include('./partials/subheads.ejs')%>
+
+<body >
+    
+    <%- include('./partials/header.ejs')%>
+    <!-- Fin Menu------------------------------------------------------------>
+    
+    <div class="container products-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="products-title">Detalle de Producto</h2>
+            </div>
+            
+            
+            <div class="col-12 col-sm-6 col-lg-3">
+                <h3><%= producto.category%></h3>
+                <section class="product-box">
+                
+                        <figure class="product-box_image">
+                            <img src="/images/<%= producto.image %>" alt="imagen de producto">
+                        </figure>
+                        <article class="product-box_data">
+                            <h2>$<%=toThousand(producto.price)%></h2>
+                            <span><%= producto.discount %>%OFF</span>
+                            <p><%= producto.name %></p>
+                            <p><%= producto.description %></p>
+                            <p>Precio final con descuento</p>
+                            <h2>$<%=formatPrice(producto.price,producto.discount)%></h2>
+                            <i class="fas fa-truck"></i>
+                        </article>
+               
+                </section>
+                
+            </div>
+            
+            
+            
+            <!--------------------------row-->                     
+        </div>                                
+        
+        
+        
+        
+        
+        
+        
+        <!-- Inicio Fotter---------------------------------------------------------->
+        <%- include('./partials/footer.ejs')%>
+        
+        <!-- Fin Fotter-------------------------------------------------------------->
+        
+    </body>
+    
+    </html>
